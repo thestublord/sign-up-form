@@ -1,0 +1,113 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 50%;
+    background-image: url('https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1862&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.sidebar img {
+    width: 50%;
+    max-width: 300px;
+}
+
+.background {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(64, 64, 64, 0.9) 25%, rgba(192, 192, 192, 0.9) 25%, rgba(192, 192, 192, 0.9) 75%, rgba(64, 64, 64, 0.9) 75%);
+    height: 100%;
+    padding: 0 20px;
+}
+
+.signup-form {
+    background-color: rgba(192, 192, 192, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.name-fields,
+.contact-fields,
+.password-fields {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    /* Increased margin between fields */
+}
+
+.name-fields input,
+.contact-fields input {
+    width: 48%;
+    margin-bottom: 10px;
+    /* Added bottom margin to space out fields vertically */
+}
+
+.password-fields input {
+    width: 100%;
+    margin-bottom: 10px;
+    /* Added bottom margin to space out fields vertically */
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input.error {
+    border-color: red;
+}
+
+input:focus {
+    border-color: blue;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #596D48;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #455738;
+}
+
+@media (max-width: 768px) {
+
+    .name-fields input,
+    .contact-fields input {
+        width: 100%;
+    }
+
+    .name-fields,
+    .contact-fields {
+        flex-direction: column;
+    }
+}
